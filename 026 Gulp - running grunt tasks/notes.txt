@@ -1,0 +1,3 @@
+
+
+demonstrate the executing of grunt tasks with JSON merge.
