@@ -68,7 +68,9 @@ First, navigate to the root director of your project, at the command line, and i
 
 <br>
 ```
+
 npm install gulp -g
+
 
 ```
 <br>
@@ -81,7 +83,10 @@ Now install `Gulp` locally.  IE: without the “`-g`”
 <br>
 
 ```
+
 npm install gulp --save-dev
+
+
 ```
 
 <br>
