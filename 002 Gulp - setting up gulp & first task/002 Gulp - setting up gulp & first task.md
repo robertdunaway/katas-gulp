@@ -67,9 +67,10 @@ These katas are demonstrated using Visual Studio 2015 which installs NodeJS so i
 First, navigate to the root director of your project, at the command line, and install `Gulp` both globally and locally.
 
 <br>
+```
+npm install gulp -g
 
-    npm install gulp -g
-
+```
 <br>
 
 Notice the “`-g`” means global.
@@ -79,7 +80,9 @@ Now install `Gulp` locally.  IE: without the “`-g`”
 
 <br>
 
-    npm install gulp --save-dev
+```
+npm install gulp --save-dev
+```
 
 <br>
 
@@ -139,7 +142,9 @@ The gulp file can be as complex or simple as you design but you need at least tw
 All plugins, including gulp itself, must be required.  Here is the require statement we used.  To access it’s functions use the variable name.
 <br>
 
-    var gulp = require('gulp');
+```
+var gulp = require('gulp');
+```
 
 <br>
 The second component, and the point of gulp, is the task.
