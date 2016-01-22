@@ -159,9 +159,11 @@ The second component, and the point of gulp, is the task.
 <br>
 
 ```
+
 gulp.task('default', function() {
   console.log('my first gulp task…');
 });
+
 
 ```
 This is the “default” task, meaning, if no tasks are passed to the gulp command then the default task is run.
