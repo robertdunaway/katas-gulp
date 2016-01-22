@@ -148,7 +148,10 @@ All plugins, including gulp itself, must be required.  Here is the require state
 <br>
 
 ```
+
 var gulp = require('gulp');
+
+
 ```
 
 <br>
