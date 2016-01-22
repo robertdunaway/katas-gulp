@@ -1,5 +1,5 @@
 ---
-title: 000 Gulp - ]
+title: 003 Gulp - multiple tasks & vs
 ## Heading ##
 tags: 
 - AngularJS
@@ -25,13 +25,13 @@ tags:
 # [000 Gulp - ]
 
 ## Duration
-[minutes]
+ 5 minutes
 
 ## Brief
-[...]
+Using the existing gulpfile.js add three new tasks.
 
 ### For more information 
-BING/GOOGLE: “Gulp ”
+BING/GOOGLE: “Gulp multiple tasks”
 
 Book: 
 [Gulp - Quick guide to getting up and running today](http://www.amazon.com/Gulp-Quick-guide-getting-running-ebook/dp/B010NXMFF6/)
@@ -46,16 +46,63 @@ Open the `[before/*.sln]` file and execute the kata.
 Feel free to execute this kata multiple times because repetition creates motor memory.
 
 ## Github
- - Before (start kata with this solution)
-  - https...
- - After (completed solution)
+ - Before (start kata with this)
+  - https://github.com/robertdunaway/katas-gulp/tree/master/003%20Gulp%20-%20multiple%20tasks%20%26%20vs/before
+ - After
+  - https://github.com/robertdunaway/katas-gulp/tree/master/003%20Gulp%20-%20multiple%20tasks%20%26%20vs/after
+
 
 # Kata
 
-Create a for loop using an incremental index.
-
+Using the existing gulpfile.js create three new functions named “`task1`”, “`task2`” and “`task3`” and then execute them as part of the `default` task.
 
 <br>
+# Review
+<br>
+The task could look like the following.
+
+<br>
+```
+
+gulp.task('task1', function () {
+    console.log('my first gulp task…');
+});
+
+gulp.task('task2', function () {
+    console.log('my second gulp task…');
+});
+
+gulp.task('default', function () {
+    console.log('my third gulp task…');
+});
+
+
+```
+
+<br>
+
+Adding these task to the default task.
+
+<br>
+
+```
+
+gulp.task('default', ['task1', 'task2', 'task3']);
+
+
+```
+
+<br>
+
+ <img src="https://raw.githubusercontent.com/robertdunaway/katas-gulp/master/003%20Gulp%20-%20multiple%20tasks%20%26%20vs/1.png">
+
+<br>
+
+Now execute the `default` task.
+
+<br>
+
+ <img src="https://raw.githubusercontent.com/robertdunaway/katas-gulp/master/003%20Gulp%20-%20multiple%20tasks%20%26%20vs/2.png">
 
 
 
