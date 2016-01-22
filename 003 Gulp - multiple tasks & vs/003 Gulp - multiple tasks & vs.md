@@ -22,7 +22,7 @@ tags:
 
  <img src="https://raw.githubusercontent.com/robertdunaway/katas-gulp/master/katas-Gulp-logo.png" alt="Smiley face" height="200" width="200"> 
 
-# [000 Gulp - ]
+# 003 Gulp - multiple tasks & vs
 
 ## Duration
  5 minutes
