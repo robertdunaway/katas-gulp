@@ -1,4 +1,6 @@
-﻿var gulp = require('gulp');
+﻿var gulp = require('gulp')
+    , runSequence = require('run-sequence')
+;
 
 gulp.task('task1', function () {
     console.log('my first gulp task…');
@@ -13,4 +15,6 @@ gulp.task('task3', function () {
 });
 
 
-gulp.task('default', ['task1', 'task2', 'task3']);
+gulp.task('default', function () {
+    runSequence(['task1', 'task2'], 'task3');
+});
