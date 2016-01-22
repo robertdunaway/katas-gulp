@@ -33,7 +33,11 @@ tags:
 ### For more information 
 BING/GOOGLE: “Gulp ”
 
-Book: http://www.amazon.com/Gulp-Quick-guide-getting-running/dp/151468960X
+Book: 
+[Gulp - Quick guide to getting up and running today](http://www.amazon.com/Gulp-Quick-guide-getting-running-ebook/dp/B010NXMFF6/)
+<br>
+<img src="https://raw.githubusercontent.com/robertdunaway/gulp-book/master/bookcoverimage.PNG" alt="Smiley face" height="150" width="150">
+
 
 
 ## Instructions
