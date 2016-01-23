@@ -93,6 +93,10 @@ The two commands, you’ll find in most files are:
 
 The result of executing the copy-to-wwwroot task is
 
+<br>
+
+ <img src="https://raw.githubusercontent.com/robertdunaway/katas-gulp/master/006%20Gulp%20-%20copy%20%26%20src%20%26%20dest/1.png">
+ 
 
 ##Next
 Take a few minutes and imagine more examples. 
