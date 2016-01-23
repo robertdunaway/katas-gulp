@@ -269,7 +269,7 @@ gulp.task('task14', function () {
 ```
 
 ##Next
-Take a few minutes and imagine more examples. 
+As our katas become more complex you will see more examples of glob patterns.
 
 <br>
 
