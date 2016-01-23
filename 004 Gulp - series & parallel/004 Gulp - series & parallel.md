@@ -17,7 +17,7 @@ tags:
 
 ###http://robertdunaway.github.io
 
-##[Gulp code kata list](http://mycodekatas.github.io/Gulp.html)
+##[Gulp code kata list](http://mycodekatas.github.io/gulp.html)
 ##[All code katas lists](http://mycodekatas.github.io/)
 
  <img src="https://raw.githubusercontent.com/robertdunaway/katas-gulp/master/katas-Gulp-logo.png" alt="Smiley face" height="200" width="200"> 
