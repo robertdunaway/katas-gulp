@@ -1,3 +1,0 @@
-
-Demonstrate error handling with both Plumber and gutil.PluginError
-
