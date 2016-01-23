@@ -1,5 +1,5 @@
 ---
-title: 003 Gulp - multiple tasks & vs
+title: 004 Gulp - series & parallel
 ## Heading ##
 tags: 
 - AngularJS
@@ -22,16 +22,16 @@ tags:
 
  <img src="https://raw.githubusercontent.com/robertdunaway/katas-gulp/master/katas-Gulp-logo.png" alt="Smiley face" height="200" width="200"> 
 
-# 003 Gulp - multiple tasks & vs
+# 004 Gulp - series & parallel
 
 ## Duration
  5 minutes
 
 ## Brief
-Using the existing gulpfile.js add three new tasks.
+Using the existing gulpfile.js manage the sequence tasks are executed.  Execute the first two in parallel and the last after the first two complete.
 
 ### For more information 
-BING/GOOGLE: “Gulp multiple tasks”
+BING/GOOGLE: “Gulp sequence”
 
 Book: 
 [Gulp - Quick guide to getting up and running today](http://www.amazon.com/Gulp-Quick-guide-getting-running-ebook/dp/B010NXMFF6/)
@@ -47,33 +47,57 @@ Feel free to execute this kata multiple times because repetition creates motor m
 
 ## Github
  - Before (start kata with this)
-  - https://github.com/robertdunaway/katas-gulp/tree/master/003%20Gulp%20-%20multiple%20tasks%20%26%20vs/before
+  - https://github.com/robertdunaway/katas-gulp/tree/master/004%20Gulp%20-%20series%20%26%20parallel/before
  - After
-  - https://github.com/robertdunaway/katas-gulp/tree/master/003%20Gulp%20-%20multiple%20tasks%20%26%20vs/after
+  - https://github.com/robertdunaway/katas-gulp/tree/master/004%20Gulp%20-%20series%20%26%20parallel/after
+
 
 
 # Kata
 
-Using the existing gulpfile.js create three new functions named “`task1`”, “`task2`” and “`task3`” and then execute them as part of the `default` task.
+Using the existing gulpfile.js configure the three functions to run in a defined sequence.  Execute “`task1`”, “`task2`” and when these finish execute “`task3`”.
 
 <br>
+
+Controlling sequence is important to the build process.  If your build process involves copying source code to a `dist` folder and then processing the files, then the file copy must complete before the additional processing begins.
+
+<br>
+
 # Review
-<br>
-The task could look like the following.
+The first thing we need to do is find a module for executing tasks in series and/or parallel.
 
 <br>
+
+Go to: https://www.npmjs.com/
+Search for “task sequence”.
+
+<br>
+
+run-sequence is a popular module with about 20,000 downloads each day.  This looks like a well-supported plug-in.  Gulp 4, in beta, offers native support for sequencing tasks with dependencies.
+
+<br>
+
+Run the following at the command line and in the root of your project.
+
+<br>
+
 ```
 
-gulp.task('task1', function () {
-    console.log('my first gulp task…');
-});
+npm install --save-dev run-sequence
 
-gulp.task('task2', function () {
-    console.log('my second gulp task…');
-});
+
+```
+
+<br>
+
+Update the `default` task to use the `runSequence` module to run all three tasks in parallel.
+
+<br>
+
+```
 
 gulp.task('default', function () {
-    console.log('my third gulp task…');
+    runSequence(['task1', 'task2', 'task3'])
 });
 
 
@@ -81,28 +105,32 @@ gulp.task('default', function () {
 
 <br>
 
-Adding these task to the default task.
+Now alter the sequencing such that “`task1`” and “`task2`” run in parallel and “`task3`” runs after “`task1`” and “`task2`” complete. 
 
 <br>
 
 ```
 
-gulp.task('default', ['task1', 'task2', 'task3']);
+gulp.task('default', function () {
+    runSequence(['task1', 'task2'], 'task3');
+});
 
 
 ```
 
 <br>
 
- <img src="https://raw.githubusercontent.com/robertdunaway/katas-gulp/master/003%20Gulp%20-%20multiple%20tasks%20%26%20vs/1.png">
+ <img src="https://raw.githubusercontent.com/robertdunaway/katas-gulp/master/004%20Gulp%20-%20series%20%26%20parallel/1.png">
 
 <br>
 
-Now execute the `default` task.
+Right click the `default` task and run it.
 
 <br>
 
- <img src="https://raw.githubusercontent.com/robertdunaway/katas-gulp/master/003%20Gulp%20-%20multiple%20tasks%20%26%20vs/2.png">
+ <img src="https://raw.githubusercontent.com/robertdunaway/katas-gulp/master/004%20Gulp%20-%20series%20%26%20parallel/2.png">
+
+
 
 
 
