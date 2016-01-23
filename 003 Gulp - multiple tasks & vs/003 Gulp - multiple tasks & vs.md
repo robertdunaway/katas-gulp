@@ -105,6 +105,17 @@ Now execute the `default` task.
  <img src="https://raw.githubusercontent.com/robertdunaway/katas-gulp/master/003%20Gulp%20-%20multiple%20tasks%20%26%20vs/2.png">
 
 
+## Visual Studio Integration
+Visual Studio Integration requires no work on our part.  Visual Studio recognizes the Node modules and gulpfile.js.  When your solution starts Visual Studio will retrieve any Node modules that are missing or require updating per configuration and Gulp will be added to the Task Runner Explorer.
+
+<br>
+
+Tasks can be bound to Visual Studio events by right clicking a task and selecting “`Bindings`” then choosing the desired event.
+
+<br>
+
+Bind a task to the “`Project Open`” event then shut down Visual Studio and reload it.  You notice the talk runs immediately without being prompted to run.
+
 
 ##Next
 Take a few minutes and imagine more examples. 
