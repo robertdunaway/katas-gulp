@@ -67,7 +67,7 @@ npm install gulp-ng-annotate --save-dev
 <br>
 Add a reference to   here.
 <br>
-```
+```javascript
 
 , ngAnnotate = require('gulp-ng-annotate')
 
@@ -78,7 +78,7 @@ We will annotate our code before copying it to `wwwroot` for optimization.  This
 <br>
 Create the annotate task.
 <br>
-```
+```javascript
 
 var gulp = require('gulp')
     , uglify = require('gulp-uglify')
@@ -123,7 +123,7 @@ The `src/js/main.js` file contains an Angular 1x service.  This service is NOT p
 Before annotation
 <br>
 
-```
+```javascript
 
 (function () {
 
@@ -151,7 +151,7 @@ Before annotation
 After annotation
 <br>
 
-```
+```javascript
 
 (function () {
 
