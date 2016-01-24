@@ -1,5 +1,5 @@
 ---
-title: 000 Gulp - ]
+title: 011 Gulp - optimizing javascript
 ## Heading ##
 tags: 
 - AngularJS
@@ -22,13 +22,13 @@ tags:
 
  <img src="https://raw.githubusercontent.com/robertdunaway/katas-gulp/master/katas-Gulp-logo.png" alt="Smiley face" height="200" width="200"> 
 
-# [000 Gulp - ]
+# 011 Gulp - optimizing javascript
 
 ## Duration
-[minutes]
+5 minutes
 
 ## Brief
-[...]
+Optimize all JavaScript files in the `wwwroot` folder.
 
 ### For more information 
 BING/GOOGLE: “Gulp ”
@@ -46,16 +46,90 @@ Open the `[before/*.sln]` file and execute the kata.
 Feel free to execute this kata multiple times because repetition creates motor memory.
 
 ## Github
- - Before (start kata with this solution)
-  - https...
- - After (completed solution)
+ - Before (start kata with this)
+  - https://github.com/robertdunaway/katas-gulp/tree/master/011%20Gulp%20-%20optimizing%20javascript/before
+ - After
+  - https://github.com/robertdunaway/katas-gulp/tree/master/011%20Gulp%20-%20optimizing%20javascript/after
+
 
 # Kata
+After all files are copied to `wwwroot`, minify all the JavaScript files but do not minify any “`*.min.js`” files.  IE: Don’t minify JavaScript files that have already been minified.
+<br>
+Install the gulp-uglify plugin.
+<br>
+```
 
-Create a for loop using an incremental index.
+npm install gulp-uglify --save-dev
+npm install gulp-rename --save-dev
+npm install gulp-sourcemaps --save-dev
 
+
+```
+<br>
+Add a reference to plugins.
+<br>
+
+```
+
+var gulp = require('gulp')
+    , uglify = require('gulp-uglify')
+    , rename = require('gulp-rename')
+    , sourcemaps = require('gulp-sourcemaps');
+
+
+```
+<br>
+
+####Create tasks
+Copy all files to the wwwroot folder.
+<br>
+
+```
+
+gulp.task('copy-to-wwwroot', function () {
+    return gulp.src(['src/**/*'])
+    .pipe(gulp.dest('wwwroot'));
+});
+
+
+```
+<br>
+Minify all non-minified JavaScript files in `wwwroot`.
+<br>
+
+```
+
+gulp.task('minify-js', function () {
+    return gulp.src(['wwwroot/**/!(*.min).js', '!wwwroot/lib/**/*'])
+     .pipe(sourcemaps.init())
+     .pipe(uglify())
+     .pipe(rename({
+         extname: '.min.js'
+     }))
+     .pipe(sourcemaps.write('./'))
+     .pipe(gulp.dest('wwwroot/./'));
+});
+
+
+```
+<br>
+####Step through minify-js
+1 Selecting all JavaScript files except already minified files.
+2 Begin the sourcemaps process.
+3 Perform the JavaScript optimization with `uglify()`.
+4 Rename the new file.  This way we’ll have the original file, a minified version of the file, and a map file.
+5 Write out the source map file.
+6 Set the destination which is `wwwroot`.
 
 <br>
+You’ll notice only `*.js` files were minified but existing `*.min.js` files were left alone.
+<br>
+
+<img src="https://raw.githubusercontent.com/robertdunaway/katas-gulp/master/011%20Gulp%20-%20optimizing%20javascript/1.png" >
+
+
+
+
 
 
 
