@@ -1,8 +1,15 @@
 ﻿var gulp = require('gulp')
     , uglify = require('gulp-uglify')
     , rename = require('gulp-rename')
-    , sourcemaps = require('gulp-sourcemaps');
+    , sourcemaps = require('gulp-sourcemaps')
+    , ngAnnotate = require('gulp-ng-annotate')
+    , runSequence = require('run-sequence');
 
+gulp.task('annotate', function () {
+    return gulp.src(['src/**/*.js', '!src/**/*.min.js'], { base: 'src/./' })
+      .pipe(ngAnnotate())
+      .pipe(gulp.dest('src/./'));
+});
 
 gulp.task('copy-to-wwwroot', function () {
     return gulp.src(['src/**/*'])
@@ -18,4 +25,8 @@ gulp.task('minify-js', function () {
      }))
      .pipe(sourcemaps.write('./'))
      .pipe(gulp.dest('wwwroot/./'));
+});
+
+gulp.task('default', function () {
+    runSequence(['annotate', 'copy-to-wwwroot'], 'minify-js');
 });
