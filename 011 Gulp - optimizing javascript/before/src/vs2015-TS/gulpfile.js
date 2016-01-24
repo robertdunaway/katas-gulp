@@ -1,5 +1,6 @@
 ﻿var gulp = require('gulp');
 
-gulp.task('default', function() {
-    console.log('my first gulp task…');
+gulp.task('copy-to-wwwroot', function () {
+    return gulp.src(['src/**/*'])
+    .pipe(gulp.dest('wwwroot'));
 });
