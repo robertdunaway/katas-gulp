@@ -54,7 +54,7 @@ Feel free to execute this kata multiple times because repetition creates motor m
 In this kata we will copy files our web site needs to a `lib` folder in `wwwroot`.
 <br>
 First let’s update our `package.json` file with the following new libraries.  Visual Studio will pull these npm modules down for us.
-
+<br>
 ```
 
     "angular2": "2.0.0-beta.0",
