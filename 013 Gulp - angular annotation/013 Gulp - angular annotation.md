@@ -58,7 +58,7 @@ Using `gulp-ng-annotate`, modify Angular 1x files in preparation for optimizatio
 # Review
 You’ll need gulp-ng-annotate.
 <br>
-```
+```javascript
 
 npm install gulp-ng-annotate --save-dev
 
