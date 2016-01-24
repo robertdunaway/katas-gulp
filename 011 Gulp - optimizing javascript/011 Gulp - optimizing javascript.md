@@ -81,7 +81,7 @@ var gulp = require('gulp')
 <br>
 
 ####Create tasks
-Copy all files to the wwwroot folder.
+Copy all files to the `wwwroot` folder.
 <br>
 
 ```
