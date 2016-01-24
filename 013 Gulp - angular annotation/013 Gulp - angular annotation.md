@@ -175,7 +175,7 @@ After annotation
 
 
 ```
-
+<br>
 <img src="https://raw.githubusercontent.com/robertdunaway/katas-gulp/master/013%20Gulp%20-%20angular%20annotation/1.png">
 
 
