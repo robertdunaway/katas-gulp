@@ -55,7 +55,7 @@ Feel free to execute this kata multiple times because repetition creates motor m
 # Kata
 After all files are copied to `wwwroot`, minify all the JavaScript files but do not minify any “`*.min.js`” files.  IE: Don’t minify JavaScript files that have already been minified.
 <br>
-Install the gulp-uglify plugin.
+Install the gulp plugin.
 <br>
 ```
 
