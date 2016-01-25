@@ -80,7 +80,7 @@ var gulp = require('gulp')
 <br>
 Create the new minifyhtml task and add it to the default task.
 <br>
-```
+```javascript
 
 gulp.task('minifycss', function () {
     return gulp.src(['wwwroot/**/*.css', '!wwwroot/**/*.min.css'], { base: 'wwwroot/./' })
