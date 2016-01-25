@@ -101,8 +101,14 @@ gulp.task('default', function () {
 ```
 <br>
 Check out your newly optimized html files.
-
-
+<br>
+Before
+<br>
+ <img src="https://raw.githubusercontent.com/robertdunaway/katas-gulp/master/015%20Gulp%20-%20optimizing%20html/1.png"> 
+<br>
+After
+<br>
+ <img src="https://raw.githubusercontent.com/robertdunaway/katas-gulp/master/015%20Gulp%20-%20optimizing%20html/2.png"> 
 ##Next
 Take a few minutes and imagine more examples. 
 
