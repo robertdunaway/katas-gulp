@@ -8,9 +8,9 @@
 /*global mashupApp:false */
 
 mashupApp.factory('alertService', ['$rootScope', function ($rootScope) {
-    'use strict';
+    'use strict'
 
-    var alertService = {};
+    var alertService = {}
     // global `alerts` array
     $rootScope.alerts = [];
     alertService.add = function (type, msg) {
