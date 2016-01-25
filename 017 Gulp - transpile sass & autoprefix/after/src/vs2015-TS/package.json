@@ -3,6 +3,7 @@
   "name": "ASP.NET",
   "private": true,
   "devDependencies": {
+    "es6-promise": "^3.0.2",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-rename": "^1.2.2",
