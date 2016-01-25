@@ -1,4 +1,5 @@
 ﻿var gulp = require('gulp')
+    , runSequence = require('run-sequence')
     , rename = require('gulp-rename')
     , sourcemaps = require('gulp-sourcemaps');
 
