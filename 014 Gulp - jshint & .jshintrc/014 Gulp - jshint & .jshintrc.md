@@ -175,7 +175,7 @@ Either the `jshint` task runs to completion, generating and output file, “`jsh
 <br>
 Addressing this error.  If you created your `.jshintrc` file in Visual Studio then there is a good chance the file was created as UTF-8 with a prefix BOM (byte order mark).
 <br>
-To correct this:
+####To correct this
 <br>
 Select the .jshintrc file.  Now select File --> `Save .jshintrc As`.
 <br>
