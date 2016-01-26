@@ -1,8 +1,13 @@
 ﻿var gulp = require('gulp')
     , runSequence = require('run-sequence')
     , rename = require('gulp-rename')
-    , sourcemaps = require('gulp-sourcemaps');
+    , sourcemaps = require('gulp-sourcemaps')
+    , clean = require('gulp-clean');
 
+gulp.task('clean-wwwroot', function () {
+    return gulp.src('wwwroot', { read: false })
+      .pipe(clean());
+});
 
 gulp.task('copy-to-wwwroot', function () {
     return gulp.src(['src/**/*'])
@@ -10,5 +15,5 @@ gulp.task('copy-to-wwwroot', function () {
 });
 
 gulp.task('default', function () {
-    runSequence(['copy-to-wwwroot']);
+    runSequence(['clean-wwwroot', 'copy-to-wwwroot']);
 });
