@@ -58,7 +58,7 @@ We’ve added a new folder named “`ts`” with TypeScript files.  Transpile th
 # Review
 Install the required plugins.
 <br>
-```
+```javascript
 
 npm install gulp-typescript --save-dev
 npm install gulp-uglify --save-dev
