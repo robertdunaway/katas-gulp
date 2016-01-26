@@ -28,5 +28,5 @@ gulp.task('minify-js', function () {
 });
 
 gulp.task('default', function () {
-    runSequence(['annotate', 'copy-to-wwwroot'], 'minify-js');
+    runSequence('annotate', 'copy-to-wwwroot', 'minify-js');
 });
