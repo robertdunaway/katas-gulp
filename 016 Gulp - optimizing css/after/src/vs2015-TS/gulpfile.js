@@ -22,5 +22,6 @@ gulp.task('minifycss', function () {
 });
 
 gulp.task('default', function () {
-    runSequence(['copy-to-wwwroot', 'minifycss']);
+    runSequence('copy-to-wwwroot', 'minifycss');
+    //runSequence(]'copy-to-wwwroot', 'minifycss']);  -- paralell, misses files.
 });
