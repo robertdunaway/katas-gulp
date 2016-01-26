@@ -4,7 +4,8 @@
     , sourcemaps = require('gulp-sourcemaps')
     , clean = require('gulp-clean')
     , ts = require('gulp-typescript')
-    , uglify = require('gulp-uglify');
+    , uglify = require('gulp-uglify')
+    , tslint = require('gulp-tslint');
 
 gulp.task('clean-wwwroot', function () {
     return gulp.src('wwwroot', { read: false })
@@ -30,6 +31,16 @@ gulp.task('tscompile', function () {
     .pipe(gulp.dest('wwwroot/./'));
 });
 
+gulp.task('tslint', function () {
+    return gulp.src(['./wwwroot/**/*.ts', '!wwwroot/lib/**/*.*'])
+        .pipe(tslint())
+        .pipe(tslint.report('verbose', {
+            emitError: true,
+            sort: true,
+            bell: true
+        }));
+});
+
 gulp.task('default', function () {
-    runSequence('clean-wwwroot', 'copy-to-wwwroot', 'tscompile');
+    runSequence('clean-wwwroot', 'copy-to-wwwroot', 'tscompile', 'tslint');
 });
