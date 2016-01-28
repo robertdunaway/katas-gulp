@@ -1,8 +1,9 @@
 ---
-title: 016 TypeScript setup tsd
-
+title: 020 Gulp - tsd
+## Heading ##
 tags: 
 - AngularJS
+- Angular2
 - Gulp
 - Bower
 - npm
@@ -16,12 +17,12 @@ tags:
 
 ###http://robertdunaway.github.io
 
-##[TypeScript code kata list](http://mycodekatas.github.io/typescript.html)
-##[All code kata lists](http://mycodekatas.github.io/)
+##[Gulp code kata list](http://mycodekatas.github.io/gulp.html)
+##[All code katas lists](http://mycodekatas.github.io/)
 
- <img src="https://raw.githubusercontent.com/robertdunaway/katas-typescript/master/katas-TS-logo.png" alt="Smiley face" height="200" width="200"> 
+ <img src="https://raw.githubusercontent.com/robertdunaway/katas-gulp/master/katas-Gulp-logo.png" alt="Smiley face" height="200" width="200"> 
 
-# 016 TypeScript setup tsd
+# 020 Gulp - tsd
 
 ## Duration
 10 minutes
@@ -32,8 +33,15 @@ Setting up TSD (TypeScript Definitions)
 ### For more information 
 BING/GOOGLE: “TypeScript tsd”
 
+Book: 
+[Gulp - Quick guide to getting up and running today](http://www.amazon.com/Gulp-Quick-guide-getting-running-ebook/dp/B010NXMFF6/)
+<br>
+<img src="https://raw.githubusercontent.com/robertdunaway/gulp-book/master/bookcoverimage.PNG" alt="Smiley face" height="150" width="150">
+
+
+
 ## Instructions
-Get tutorial folder or the entire katas-typescript repo.
+Get tutorial folder or the entire katas-Gulp repo.
 Open the `[before/*.sln]` file and execute the kata.
 Feel free to execute this kata multiple times because repetition creates motor memory.
 
@@ -124,7 +132,7 @@ Open any `*.ts` file and type “angular” and intellisense is activated.
 
 <br>
 
- <img src="https://raw.githubusercontent.com/robertdunaway/katas-typescript/master/016%20TypeScript%20-%20setup%20tsd/1.png" alt="Smiley face"> 
+ <img src="https://raw.githubusercontent.com/robertdunaway/katas-gulp/master/020%20Gulp%20-%20tsd/1.png" alt="Smiley face"> 
 
 <br>
 
@@ -140,7 +148,7 @@ Create a new file at the root of the project named “`gulp_tsd.json`”.  Add t
 
 <br>
 
-```
+```javascript
 
     {
         "command": "reinstall", 
