@@ -59,7 +59,9 @@ Install TSD, a kind of package manager for TypeScript Definitions.
 <br>
 
 ```
+
 npm install tsd -g
+
 
 ```
 
@@ -89,7 +91,10 @@ Create TSD files
 <br>
 
 ```
+
 	npm init
+
+
 ```
 <br>
 
@@ -102,7 +107,10 @@ Get TSD definitions for Angularjs and its dependencies.
 <br>
 
 ```
+
 tsd install angular --resolve --overwrite --save
+
+
 ```
 
 <br>
@@ -112,7 +120,10 @@ To reinstall TSD definitions
 <br>
 
 ```
+
 tsd reinstall --save –overwrite
+
+
 ```
 
 <br>
@@ -122,7 +133,10 @@ To update with the latest definitions
 <br>
 
 ```
+
 tsd update --save –overwrite
+
+
 ```
 
 <br>
@@ -158,13 +172,17 @@ Create a new file at the root of the project named “`gulp_tsd.json`”.  Add t
         }
     }
 
+
 ```
 
 Add a task to the gulp file.  First add a reference to the gulp-tsd plugin.
 
 <br>
 ```
+
     , tsd = require('gulp-tsd');
+
+
 ```
 <br>
 
