@@ -86,7 +86,7 @@ Add the clean reference.
 
 <br>
 
-```
+```javascript
 
 var gulp = require('gulp')
   , clean = require('gulp-clean')
@@ -102,7 +102,7 @@ Add the `copy-to-wwwroot` task.
 
 <br>
 
-```
+```javascript
 
 gulp.task('clean-wwwroot', function () {
     return gulp.src('wwwroot', { read: false })
@@ -118,7 +118,7 @@ Create the default task.
 
 <br>
 
-```
+```javascript
 
 // ----------------------------------------------------------------
 // Default Task
