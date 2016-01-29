@@ -55,7 +55,7 @@ In this kata we will copy files our web site needs to a `lib` folder in `wwwroot
 <br>
 First let’s update our `package.json` file with the following new libraries.  Visual Studio will pull these npm modules down for us.
 <br>
-```
+```typescript
 
     "angular2": "2.0.0-beta.0",
     "systemjs": "0.19.6",
@@ -71,7 +71,7 @@ First let’s update our `package.json` file with the following new libraries.  
 Here is the entire package.json when updated.
 <br>
 
-```
+```typescript
 
 {
   "version": "1.0.0",
@@ -108,7 +108,7 @@ If you don’t already have a `bower.json` file then run command bower `init`.  
 You’re new bower files looks something like this.
 <br>
 
-```
+```javascript
 
 {
   "name": "ASP.NET",
@@ -168,7 +168,7 @@ node_modules/angular2/bundles/angular2.dev.js
 Here is how your solution might have turned out.
 <br>
 
-```
+```javascript
 
 gulp.task('libs', function () {
     return gulp.src(['bower_components/**//normalize-css/normalize.css'
