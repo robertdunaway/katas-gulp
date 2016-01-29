@@ -77,7 +77,7 @@ npm install gulp-autoprevix --save-dev
 <br>
 Then add this line of code after the reference section.
 <br>
-```
+```typescript
 
 require('es6-promise').polyfill();
 
@@ -86,7 +86,7 @@ require('es6-promise').polyfill();
 <br>
 After you’ve added your task the gulp file should look something like this.
 <br>
-```
+```typescript
 
 var gulp = require('gulp')
     , runSequence = require('run-sequence')
