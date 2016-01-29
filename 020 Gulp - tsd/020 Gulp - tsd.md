@@ -178,7 +178,7 @@ Create a new file at the root of the project named “`gulp_tsd.json`”.  Add t
 Add a task to the gulp file.  First add a reference to the gulp-tsd plugin.
 
 <br>
-```
+```typescript
 
     , tsd = require('gulp-tsd');
 
@@ -190,7 +190,7 @@ Then add this task.
 
 <br>
 
-```
+```typescript
 
 gulp.task('tsd', function () {
     return gulp.src('./gulp_tsd.json').pipe(tsd());
