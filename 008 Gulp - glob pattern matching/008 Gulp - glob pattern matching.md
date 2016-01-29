@@ -100,7 +100,7 @@ src/**/*.*
 1 Create a task, named `copy-to-wwwroot`, to copy all files and folders of the `src` folder to `wwwroot`.  
 <br>
 
-```
+```javascript
 
 gulp.task('copy-to-wwwroot', function () {
     return gulp.src(['src/**/*'])
@@ -113,7 +113,7 @@ gulp.task('copy-to-wwwroot', function () {
 <br>
 2 Create a task, named `task2`, to copy a single file `humans.txt` to folder named `task2`.  If the folder doesn’t already exist it will be created.
 <br>
-```
+```javascript
 
 gulp.task('task2', function () {
     return gulp.src(['src/humans.txt'])
@@ -125,7 +125,7 @@ gulp.task('task2', function () {
 <br>
 3 Create a task, named `task3`, to copy an array of files `humans.txt, robots.txt, favicon.ico, tile.png` to folder named `task3`.  
 <br>
-```
+```javascript
 
 gulp.task('task3', function () {
     return gulp.src(['src/humans.txt', 'src/robots.txt',
@@ -138,7 +138,7 @@ gulp.task('task3', function () {
 <br>
 4 Create a task, named `task4`, to copy all JavaScript files to a folder named `task4`.
 <br>
-```
+```javascript
 
 gulp.task('task4', function () {
     return gulp.src(['src/**/*.js'])
@@ -150,7 +150,7 @@ gulp.task('task4', function () {
 <br>
 5 Create a task, named `task5`, to copy all JavaScript files to a folder named `task5` excluding any minified files.  In task 4 you will notice one minified file was copies.
 <br>
-```
+```javascript
 
 gulp.task('task5', function () {
     return gulp.src(['src/**/*.js', '!src/**/*.min.js'])
@@ -162,7 +162,7 @@ gulp.task('task5', function () {
 <br>
 6 Create a task, named `task6`, to copy all JavaScript files to a folder named `task6` excluding any minified files.  See if you can achieve this task with a single glob statement.
 <br>
-```
+```javascript
 
 gulp.task('task6', function () {
     return gulp.src(['src/**/!(*.min).js'])
@@ -174,7 +174,7 @@ gulp.task('task6', function () {
 <br>
 7 Identify what the remaining glob patterns do.
 <br>
-```
+```javascript
 
 src
 src/
@@ -188,7 +188,7 @@ src/**/*.*
 
 ```
 <br>
-```
+```javascript
 
 gulp.task('task7', function () {
     return gulp.src(['src'])
@@ -198,7 +198,7 @@ gulp.task('task7', function () {
 
 ```
 <br>
-```
+```javascript
 
 gulp.task('task8', function () {
     return gulp.src(['src/'])
@@ -208,7 +208,7 @@ gulp.task('task8', function () {
 
 ```
 <br>
-```
+```javascript
 
 gulp.task('task9', function () {
     return gulp.src(['src/*'])
@@ -218,7 +218,7 @@ gulp.task('task9', function () {
 
 ```
 <br>
-```
+```javascript
 
 gulp.task('task10', function () {
     return gulp.src(['src/*.*'])
@@ -228,7 +228,7 @@ gulp.task('task10', function () {
 
 ```
 <br>
-```
+```javascript
 
 gulp.task('task11', function () {
     return gulp.src(['src/**'])
@@ -238,7 +238,7 @@ gulp.task('task11', function () {
 
 ```
 <br>
-```
+```javascript
 
 gulp.task('task12', function () {
     return gulp.src(['src/**/'])
@@ -248,7 +248,7 @@ gulp.task('task12', function () {
 
 ```
 <br>
-```
+```javascript
 
 gulp.task('task13', function () {
     return gulp.src(['src/**/*'])
@@ -258,7 +258,7 @@ gulp.task('task13', function () {
 
 ```
 <br>
-```
+```javascript
 
 gulp.task('task14', function () {
     return gulp.src(['src/**/*.*'])
