@@ -69,7 +69,7 @@ npm install gulp-jshint-html-reporter --save-dev
 <br>
 Reference these plugins.
 <br>
-```
+```typescript
 
     , jshint = require('gulp-jshint')
     , stylish = require('jshint-stylish')
@@ -80,7 +80,7 @@ Reference these plugins.
 <br>
 Add the jshint task
 <br>
-```
+```typescript
 
 gulp.task('jshint', function () {
     return gulp.src(['./src/**/(*!.min.js)*.js'])
@@ -102,7 +102,7 @@ Create a file with any name and then rename it to “`.jshintrc`”.  For some r
 <br>
 Now add the following configuration to the `.jshintrc` file.  `jshint` will use this to drive what is enforced and what is not.
 <br>
-```
+```typescript
 
 {
     "bitwise": true,
