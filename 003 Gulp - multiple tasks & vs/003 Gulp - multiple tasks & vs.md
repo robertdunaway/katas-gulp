@@ -62,7 +62,7 @@ Using the existing gulpfile.js create three new functions named “`task1`”, �
 The task could look like the following.
 
 <br>
-```
+```javascript
 
 gulp.task('task1', function () {
     console.log('my first gulp task…');
@@ -85,7 +85,7 @@ Adding these task to the default task.
 
 <br>
 
-```
+```javascript
 
 gulp.task('default', ['task1', 'task2', 'task3']);
 
