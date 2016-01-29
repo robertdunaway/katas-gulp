@@ -94,7 +94,7 @@ Update the `default` task to use the `runSequence` module to run all three tasks
 
 <br>
 
-```
+```javascript
 
 gulp.task('default', function () {
     runSequence(['task1', 'task2', 'task3'])
@@ -109,7 +109,7 @@ Now alter the sequencing such that “`task1`” and “`task2`” run in parall
 
 <br>
 
-```
+```javascript
 
 gulp.task('default', function () {
     runSequence(['task1', 'task2'], 'task3');
