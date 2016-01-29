@@ -69,7 +69,7 @@ npm install gulp-sourcemaps --save-dev
 Add a reference to plugins.
 <br>
 
-```
+```javascript
 
 var gulp = require('gulp')
     , uglify = require('gulp-uglify')
@@ -84,7 +84,7 @@ var gulp = require('gulp')
 Copy all files to the `wwwroot` folder.
 <br>
 
-```
+```javascript
 
 gulp.task('copy-to-wwwroot', function () {
     return gulp.src(['src/**/*'])
@@ -97,7 +97,7 @@ gulp.task('copy-to-wwwroot', function () {
 Minify all non-minified JavaScript files in `wwwroot`.
 <br>
 
-```
+```javascript
 
 gulp.task('minify-js', function () {
     return gulp.src(['wwwroot/**/!(*.min).js', '!wwwroot/lib/**/*'])
