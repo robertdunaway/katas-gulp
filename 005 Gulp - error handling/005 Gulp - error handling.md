@@ -69,7 +69,7 @@ Npm install gulp-plumber --save-dev
 
 Now add a reference to the gulp plugin.
 <br>
-```
+```javascript
 
     , plumber = require('gulp-plumber')
 
@@ -81,7 +81,7 @@ Now add a reference to the gulp plugin.
 Add plumber to a task.
 <br>
 
-```
+```javascript
 
 gulp.task('copy-to-wwwroot', function () {
     return gulp.src(['src/**/*'])
