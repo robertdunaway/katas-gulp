@@ -69,7 +69,7 @@ All that is required to copy files is gulp.  No plugins need installed.
 
 <br>
 
-```
+```typescript
 
 var gulp = require('gulp');
 
@@ -84,11 +84,15 @@ gulp.task('copy-to-wwwroot', function () {
 <br>
 
 The two commands, you’ll find in most files are:
+<br>
+```typescript
 
     gulp.src()
 
     gulp.dest()
 
+
+```
 <br>
 
 The result of executing the copy-to-wwwroot task is
