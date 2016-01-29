@@ -110,7 +110,7 @@ If you don’t see the new file, select “Show All Files” in the Solution Exp
 
 Opening the `package.json` file, at this point, you will see.
 
-```
+```javascript
 
 {
   "version": "1.0.0",
@@ -120,6 +120,7 @@ Opening the `package.json` file, at this point, you will see.
     "gulp": "^3.9.0"
   }
 }
+
 
 ```
 
@@ -133,6 +134,7 @@ Create a file named `gulpfile.js`.  This will hold all our `Gulp` tasks.
 Paste into `gulpfile.js` the following code.
 
 <br>
+``` javascript
 
 var gulp = require('gulp');
 
@@ -140,6 +142,8 @@ gulp.task('default', function() {
   console.log('my first gulp task…');
 });
 
+
+```
 <br>
 
 The gulp file can be as complex or simple as you design but you need at least two components.
@@ -147,7 +151,7 @@ The gulp file can be as complex or simple as you design but you need at least tw
 All plugins, including gulp itself, must be required.  Here is the require statement we used.  To access it’s functions use the variable name.
 <br>
 
-```
+```javascript
 
 var gulp = require('gulp');
 
@@ -158,7 +162,7 @@ var gulp = require('gulp');
 The second component, and the point of gulp, is the task.
 <br>
 
-```
+```javascript
 
 gulp.task('default', function() {
   console.log('my first gulp task…');
