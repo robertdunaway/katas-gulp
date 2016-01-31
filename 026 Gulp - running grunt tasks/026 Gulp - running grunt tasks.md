@@ -46,9 +46,11 @@ Open the `[before/*.sln]` file and execute the kata.
 Feel free to execute this kata multiple times because repetition creates motor memory.
 
 ## Github
- - Before (start kata with this solution)
-  - https...
- - After (completed solution)
+ - Before (start kata with this)
+  - https://github.com/robertdunaway/katas-gulp/tree/master/026%20Gulp%20-%20running%20grunt%20tasks/before
+ - After
+  - https://github.com/robertdunaway/katas-gulp/tree/master/026%20Gulp%20-%20running%20grunt%20tasks/after
+
 
 # Kata
 On occasion you might need to combine JSON files.  
