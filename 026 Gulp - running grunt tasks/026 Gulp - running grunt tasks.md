@@ -28,7 +28,7 @@ tags:
 10 minutes
 
 ## Brief
-[...]
+Execute a Grunt task with Gulp.
 
 ### For more information 
 Execute a Grunt task with Gulp.
