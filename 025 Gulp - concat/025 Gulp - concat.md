@@ -1,5 +1,5 @@
 ---
-title: 000 Gulp - ]
+title: 025 Gulp - concat
 ## Heading ##
 tags: 
 - AngularJS
@@ -22,13 +22,13 @@ tags:
 
  <img src="https://raw.githubusercontent.com/robertdunaway/katas-gulp/master/katas-Gulp-logo.png" alt="Smiley face" height="200" width="200"> 
 
-# [000 Gulp - ]
+# 025 Gulp - concat
 
 ## Duration
-[minutes]
+5 minutes
 
 ## Brief
-[...]
+In this kata we will combine multiple files into one.
 
 ### For more information 
 BING/GOOGLE: “Gulp ”
@@ -46,16 +46,70 @@ Open the `[before/*.sln]` file and execute the kata.
 Feel free to execute this kata multiple times because repetition creates motor memory.
 
 ## Github
- - Before (start kata with this solution)
-  - https...
- - After (completed solution)
+ - Before (start kata with this)
+  - https://github.com/robertdunaway/katas-gulp/tree/master/025%20Gulp%20-%20concat/before
+ - After
+  - https://github.com/robertdunaway/katas-gulp/tree/master/025%20Gulp%20-%20concat/after
+
 
 # Kata
 
-Create a for loop using an incremental index.
-
-
+Bundle all the JavaScript files, in `src`, and output them into a single file named `all.js`.  Then minify the `all.js` file and output `all.min.js`.
 <br>
+# Review
+Install the NPM modules needed.
+<br>
+```
+
+npm install gulp-concat --save-dev
+npm install gulp-uglify --save-dev
+
+
+```
+<br>
+Add the references to the gulp file.
+<br>
+```
+
+, concat = require('gulp-concat')
+, uglify = require('gulp-uglify')
+
+
+```
+<br>
+Create a task to concatenate, minify, and map all JavaScript files in the `src/js` folder.
+<br>
+```
+
+gulp.task('concatJS', function () {
+    return gulp.src('src/js/**/*')
+      .pipe(concat('all.js'))
+
+
+         .pipe(sourcemaps.init())
+         .pipe(uglify())
+         .pipe(rename({
+             extname: '.min.js'
+         }))
+         .pipe(sourcemaps.write('./'))
+
+        
+      .pipe(gulp.dest('./wwwroot/js/'));
+});
+
+gulp.task('default', function () {
+    runSequence('copy-to-wwwroot', 'concatJS');
+});
+
+
+```
+<br>
+
+Just seems like a good place to insert an image.
+<br>
+<img src="https://raw.githubusercontent.com/robertdunaway/katas-gulp/master/025%20Gulp%20-%20concat/1.png"> 
+
+
 
 
 
