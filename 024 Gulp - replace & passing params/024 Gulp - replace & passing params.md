@@ -88,9 +88,13 @@ npm install yargs --save-dev
 
 ```
 <br>
+
 **gulp-replace-task:** Enables us to find and replace variables identified with “@@”.
+
 **yargs:** Enables the use of command line parameters.
+
 **fs:** Enables the ability to load local files.
+
 <br>
 Add references to the new modules to the gulpfile.
 <br>
