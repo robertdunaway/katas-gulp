@@ -31,7 +31,7 @@ tags:
 In this kata we will combine multiple files into one.
 
 ### For more information 
-BING/GOOGLE: “Gulp ”
+BING/GOOGLE: “Gulp concat minify javascript”
 
 Book: 
 [Gulp - Quick guide to getting up and running today](http://www.amazon.com/Gulp-Quick-guide-getting-running-ebook/dp/B010NXMFF6/)
