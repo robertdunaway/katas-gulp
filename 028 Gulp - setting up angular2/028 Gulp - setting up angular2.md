@@ -1,5 +1,5 @@
 ---
-title: 001 Angular2 - getting started
+title: 028 Gulp - setting up angular2
 
 tags: 
 - AngularJS
@@ -22,16 +22,16 @@ tags:
 
  <img src="https://raw.githubusercontent.com/robertdunaway/katas-angular2/master/katas-Angular2-logo.png" alt="Smiley face" height="200" width="200"> 
 
-# 001 Angular2 - getting started
+# 028 Gulp - setting up angular2
 
 ## Duration
 15 minutes
 
 ## Brief
-This kata is more an explanation than a kata.   You will learn the anatomy of the solution we are using for the Angular2 katas.
+This kata is more an explanation than a kata.   You will how to set up Gulp to ease development with automated tasks.
 
 ### For more information 
-BING/GOOGLE: “Angular2 Getting Started”
+BING/GOOGLE: “Gulp Angular2”
 
 Read eBook: https://www.ng-book.com/2/
 
@@ -42,8 +42,7 @@ Open the `[before/*.sln]` file and execute the kata.
 Feel free to execute this kata multiple times because repetition creates motor memory.
 
 ## Github
-
- - https://github.com/robertdunaway/katas-angular2/tree/master/001%20Angular2%20-%20getting%20started/after
+https://github.com/robertdunaway/katas-gulp/tree/master/028%20Gulp%20-%20setting%20up%20angular2/afterKata
 
 # Kata
 
@@ -52,7 +51,7 @@ We already have an Angular2 project with TypeScript compilation with Gulp.  Feel
 
 ##Adding JavaScript libraries
 
-We added the following libraries to the package.json file.  These are recommended by Google but some can be swapped out for something you prefer.  IE: SystemJS is a module loader.  Other module loaders like WebPack are preferred by some and can be used instead.
+We added the following libraries to the `package.json` file.  These are recommended by Google but some can be swapped out for something you prefer.  IE: SystemJS is a module loader.  Other module loaders like WebPack are preferred by some and can be used instead.
 
 <br>
 
@@ -250,7 +249,7 @@ To support the automatic update of the Definitely Typed system we created a gulp
 ```
 
 <br>
- <img src="https://raw.githubusercontent.com/robertdunaway/katas-angular2/master/001%20Angular2%20-%20getting%20started/1.png"> 
+ <img src="https://raw.githubusercontent.com/robertdunaway/katas-gulp/master/028%20Gulp%20-%20setting%20up%20angular2/1.png"> 
 
 <br>
 
