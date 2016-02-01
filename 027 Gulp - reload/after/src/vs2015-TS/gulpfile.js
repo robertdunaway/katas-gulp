@@ -147,7 +147,7 @@ gulp.task('watch', function () {
     // ---------------------------------------------------------------
     // Watch - Execute linters
     // ---------------------------------------------------------------
-    gulp.watch(['wwwroot/**/*.ts', '!wwwroot/lib/**/*.*', '!wwwroot/css/**/*.*'], function () { runSequence('tslint'); });
+    gulp.watch(['wwwroot/**/*.ts', '!wwwroot/lib/**/*.*', '!wwwroot/css/**/*.*'], function () { runSequence('tslint', 'reload'); });
 
     // ---------------------------------------------------------------
     // Watching HTML files
