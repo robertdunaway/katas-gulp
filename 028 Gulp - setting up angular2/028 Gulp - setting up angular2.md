@@ -56,6 +56,7 @@ We added the following libraries to the `package.json` file.  These are recommen
 <br>
 
 ```typescript
+
     "angular2": "2.0.0-beta.0",
     "systemjs": "0.19.6",
     "es6-promise": "^3.0.2",
@@ -63,6 +64,7 @@ We added the following libraries to the `package.json` file.  These are recommen
     "reflect-metadata": "0.1.2",
     "rxjs": "5.0.0-beta.0",
     "zone.js": "0.5.10"
+
 
 ```
 
@@ -73,6 +75,7 @@ After adding these our `package.json` will look like this.  It’s getting lengt
 <br>
 
 ```typescript
+
 {
   "version": "1.0.0",
   "name": "ASP.NET",
@@ -105,6 +108,7 @@ After adding these our `package.json` will look like this.  It’s getting lengt
   }
 }
 
+
 ```
 
 <br>
@@ -116,12 +120,14 @@ We added the following to our Gulp file so the libraries can be copied to `wwwro
 <br>
 
 ```typescript
+
 // for angular2
  , 'node_modules/**//es6-shim/es6-shim.min.js'
  , 'node_modules/**//angular2/bundles/angular2-polyfills.min.js'
  , 'node_modules/**//systemjs/dist/system.src.js'
  , 'node_modules/**//rxjs/bundles/rx.min.js'
  , 'node_modules/**//angular2/bundles/angular2.min.js'
+
 
 ```
 <br>
@@ -131,6 +137,7 @@ The `lib` task in the `gulpfile.json` file should look like this:
 <br>
 
 ```typescript
+
 gulp.task('libs', function () {
     return gulp.src(['bower_components/**//normalize-css/normalize.css'
                     , 'bower_components/**//font-awesome/css/font-awesome.min.css'
@@ -152,6 +159,7 @@ gulp.task('libs', function () {
       .pipe(gulp.dest('wwwroot/lib/./'));
 });
 
+
 ```
 
 <br>
@@ -161,11 +169,13 @@ We added references to the new libraries in the index.html file.
 <br>
 
 ```typescript
+
 <script src="../lib/es6-shim/es6-shim.min.js"></script>
 <script src="../lib/angular2/bundles/angular2-polyfills.min.js"></script>
 <script src="../lib/systemjs/dist/system.src.js"></script>
 <script src="../lib/rxjs/bundles/rx.min.js"></script>
 <script src="../lib/angular2/bundles/angular2.min.js"></script>
+
 
 ```
 
@@ -183,6 +193,7 @@ If you open the `app.ts` file, you’ll find the following.
 <br>
 
 ```typescript
+
 import { bootstrap } from 'angular2/platform/browser';
 import { Component } from 'angular2/core';
 
@@ -199,6 +210,7 @@ class HelloWorld { }
 
 bootstrap(HelloWorld);
 
+
 ```
 
 <br>
@@ -208,6 +220,7 @@ We’ve added our JavaScript libraries but one important file we did not add was
 <br>
 
 ```HTML
+
 <script>
     System.config({
         packages: {
@@ -220,6 +233,7 @@ We’ve added our JavaScript libraries but one important file we did not add was
     System.import('app.js')
           .then(null, console.error.bind(console));
 </script>
+
 
 ```
 
@@ -237,6 +251,7 @@ To support the TypeScript transpilation we have a tsconfig.json file.
 To support the automatic update of the Definitely Typed system we created a gulp_tsd.json file.  The gulpfile.js file has a task that uses this configuration file.  This task, “tsd”, is bound to “Project Open” in Visual Studio.
 <br>
 ```json
+
 {
   "command": "reinstall",
   "latest": true,
@@ -256,9 +271,12 @@ To support the automatic update of the Definitely Typed system we created a gulp
 NOTE: This provides Visual Studio what it needs to provide intellisense.  
 <br>
 Examples of commands to retrieve Definitely Typed definitions.
+<br>
 ```
+
 tsd query angular2 --action install –save
 tsd query systemjs --action install --save
+
 
 ```
 <br>
@@ -269,8 +287,9 @@ Let’s walk through the Gulp implementation.
 Visual Studio 2015, by default, serves pages out of the `wwwroot` folder.  This is where our files need to end up.  You can consider this the destination folder.
 <br>
 Our source code will be in the `src` folder.
+<br>
 The Gulp file performs the following tasks and in this order.
-
+<br>
  - **clean-wwwroot** – Clean out the `wwwroot` folder.  This gives us a clean slate.
  - **copy-to-wwwroot** – All the code from the `src` folder is copied to the `wwwroot` folder.
  - **libs** – copies all library files, we need at run-time, to the libs folder in `wwwroot`. 
@@ -278,8 +297,12 @@ The Gulp file performs the following tasks and in this order.
  - **tscompile** – transpiles all TypeScript files down to JavaScript and provides a map allowing us to use TypeScript for debugging in the browser.
  - **tslint** – provides TypeScript guidance.
  - **watch** – provides a group of file watchers.  When changes occur the files are re-optimized and put in `wwwroot`.
- - reload – provides live reload capabilities.
-  - NOTE: To get live reload working you must install the Chrome addin for livereload.  This feature only works in Chrome.  
+ - **reload** – provides live reload capabilities.
+
+
+> NOTE: To get live reload working you must install the Chrome addin for
+> livereload.  This feature only works in Chrome.
+
   - https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?hl=en
 
 <br>
