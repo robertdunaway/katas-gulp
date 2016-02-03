@@ -121,13 +121,18 @@ gulp.task('reload', function () {
 // ----------------------------------------------------------------
 // Default Task
 // ----------------------------------------------------------------
-gulp.task('default', function () {
-    runSequence('clean-wwwroot', 'copy-to-wwwroot', 'libs',
-                ['minifyhtml', 'tscompile', 'tslint']
-                , 'watch'
-                );
-});
+gulp.task('default', 
+  gulp.series(
+    'clean-wwwroot'
+    //gulp.parallel('sass', 'copy-assets', 'ts-compile', 'templates', 'copy-vendor'),
+    //'index'
+  )
+);
 
+    // runSequence('clean-wwwroot'
+    //, 'copy-to-wwwroot', 'libs',
+    //        ['minifyhtml', 'tscompile', 'tslint']
+    //        , 'watch');
 
 gulp.task('watch', function () {
 
