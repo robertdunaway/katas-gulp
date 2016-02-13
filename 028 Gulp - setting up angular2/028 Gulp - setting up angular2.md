@@ -37,7 +37,7 @@ Read eBook: https://www.ng-book.com/2/
 
 
 ## Instructions
-Get tutorial folder or the entire katas-angular2 repo.
+Get tutorial folder or the entire katas-gulp repo.
 Open the `[before/*.sln]` file and execute the kata.
 Feel free to execute this kata multiple times because repetition creates motor memory.
 
